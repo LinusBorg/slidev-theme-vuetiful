@@ -1,15 +1,23 @@
 {
   "name": "slidev-theme-vuetiful",
   "version": "0.0.0",
-  "engines": {
-    "node": ">=14.0.0",
-    "slidev": ">=0.19.3"
+  "license": "MIT",
+  "author": {
+    "name": "Thorsten Lünborg",
+    "url": "https://www.linusb.org"
   },
+  "repository": "https://www.github.com/linusborg/slidev-theme-vuetiful",
   "keywords": [
     "slidev-theme",
     "slidev"
   ],
   "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
+  "scripts": {
+    "dev": "slidev example.md --open",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png"
+  },
   "slidev": {
     "colorSchema": "both",
     "highlighter": "shiki",
@@ -21,11 +29,9 @@
       "hightlighter": "shiki"
     }
   },
-  "scripts": {
-    "dev": "slidev example.md --open",
-    "build": "slidev build example.md",
-    "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png"
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=0.19.3"
   },
   "dependencies": {
     "@linusborg/eslint-config": "^0.1.0",
