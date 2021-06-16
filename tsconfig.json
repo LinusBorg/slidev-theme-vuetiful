@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "outDir": "dist"
+  },
+  "include": ["components/**/*.vue", "layouts/**/*.vue", "setup/*.ts", "utils/*.js", "windi.config.js", "utils/props.ts"]
+}
