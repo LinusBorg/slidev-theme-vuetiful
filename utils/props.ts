@@ -1,4 +1,3 @@
-
 declare module '@vue/runtime-core' {
   export interface ComponentCustomProperties {
     $slidev: {
@@ -18,4 +17,5 @@ export default {
   fonts: Object,
   layout: String,
   title: String,
-};
+  showTitle: Boolean,
+}

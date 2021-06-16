@@ -6,7 +6,7 @@ module.exports = {
       files: ['*.js', '*.ts'],
       env: {
         node: true,
-      }
-    }
-  ]
+      },
+    },
+  ],
 }

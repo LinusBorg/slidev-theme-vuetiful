@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980px" height="551px" viewBox="0 0 980 551" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Section</title>
+    <defs>
+        <filter x="-5.0%" y="-5.7%" width="109.9%" height="111.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="-3" dy="-3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.203921569   0 0 0 0 0.28627451   0 0 0 0 0.368627451  0 0 0 0.75 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Section" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(567.000000, -13.000000)" fill-rule="nonzero">
+            <g id="Vue-Logo" filter="url(#filter-1)">
+                <g id="vue-logo">
+                    <polygon id="Path" fill="#41B883" points="552.074073 0 448.496573 179.208322 344.9225 0 0 0 448.5 776 897 0"></polygon>
+                    <polygon id="Path" fill="#34495E" points="552.074073 0 446.485357 175.500805 344.9225 0 178.055233 0 446.488789 462.38342 714.953647 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

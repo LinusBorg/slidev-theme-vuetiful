@@ -1,16 +1,11 @@
 ---
 theme: ./
+clicks: 1
 ---
 
 # Slidev Theme Starter
 
 Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="next" class="px-2 p-1 rounded cursor-pointer hover:bg-white hover:bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
 
 ---
 
@@ -31,6 +26,30 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 
 Read more about [Why Slidev?](https://sli.dev/guide/why)
 
+
+---
+layout: section
+---
+
+# This is a section
+
+---
+layout: quote
+author: Linus Borg (2021)
+---
+
+# This is a quote, and it's quite long. We have to see how line breaks are handled, because Im not quite sure.
+
+---
+layout: big-points
+title: This is for  bigger points
+showTitle: true
+---
+
+
+- Increased font size...
+- ...and centered content
+- help stressing a few points
 
 ---
 
@@ -70,6 +89,19 @@ function updateUser(id: number, update: Partial<User>) {
   saveUser(id, newUser)
 }
 ```
+
+---
+layout: outro
+showTitle: true
+title: This is the end!
+twitter: '@LinusBorg'
+repository: 'linusborg/vueday-enterjs-2021'
+hostedSlides: 'vueday-2021.linusb.org'
+website: 'https://www.linusb.org'
+---
+
+I hope you liked it!
+
 
 ---
 layout: center

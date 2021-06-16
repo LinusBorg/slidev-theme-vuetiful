@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980px" height="551px" viewBox="0 0 980 551" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Default</title>
+    <defs>
+        <filter x="-2.2%" y="-21.7%" width="104.4%" height="143.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.203921569   0 0 0 0 0.28627451   0 0 0 0 0.368627451  0 0 0 0.75 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Default" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bottom-Lines" filter="url(#filter-1)" transform="translate(-50.687746, 539.157340)">
+            <rect id="Rectangle" fill="#41B883" x="14.8835175" y="0.49653278" width="1032" height="99"></rect>
+            <rect id="Rectangle" fill="#34495E" x="0.133501729" y="6.12434689" width="1032" height="99"></rect>
+        </g>
+        <g id="Top-Right-Vues" transform="translate(901.360567, -22.868745)" fill-rule="nonzero" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="2">
+            <g id="Group" transform="translate(42.659454, 32.756006)">
+                <g id="Vue-Logo-rounded" transform="translate(27.500000, 24.000000) rotate(21.000000) translate(-27.500000, -24.000000) ">
+                    <g id="vue-logo" transform="translate(0.995475, 1.000000)">
+                        <path d="M20.9614545,-1 L26.5043367,8.62013792 L32.0474023,-1 L54.7393536,-1 L26.5045249,48.0030335 L-1.73030383,-1 L20.9614545,-1 Z" id="Path" fill="#41B883"></path>
+                        <path d="M20.9304082,-1 L26.3957066,8.46673578 L32.0776444,-1 L44.0425478,-1 L26.3791115,29.4952489 L8.7177346,-1 L20.9304082,-1 Z" id="Path" fill="#34495E"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="Group" transform="translate(32.000000, 10.000000)">
+                <g id="Vue-Logo-rounded" transform="translate(27.500000, 24.000000) rotate(26.000000) translate(-27.500000, -24.000000) ">
+                    <g id="vue-logo" transform="translate(0.995475, 1.000000)">
+                        <path d="M20.9614545,-1 L26.5043367,8.62013792 L32.0474023,-1 L54.7393536,-1 L26.5045249,48.0030335 L-1.73030383,-1 L20.9614545,-1 Z" id="Path" fill="#41B883"></path>
+                        <path d="M20.9304082,-1 L26.3957066,8.46673578 L32.0776444,-1 L44.0425478,-1 L26.3791115,29.4952489 L8.7177346,-1 L20.9304082,-1 Z" id="Path" fill="#34495E"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="Group" transform="translate(8.000000, 11.000000)">
+                <g id="Vue-Logo-rounded" transform="translate(27.000000, 24.000000) rotate(-22.000000) translate(-27.000000, -24.000000) ">
+                    <g id="vue-logo" transform="translate(0.977376, 1.000000)">
+                        <path d="M20.5961269,-1 L26.02244,8.59222651 L31.4489326,-1 L53.7598823,-1 L26.0226244,48.0309449 L-1.71463348,-1 L20.5961269,-1 Z" id="Path" fill="#41B883"></path>
+                        <path d="M20.5656375,-1 L25.9161674,8.43956769 L31.4787874,-1 L43.2575434,-1 L25.8994901,29.5229801 L8.54346062,-1 L20.5656375,-1 Z" id="Path" fill="#34495E"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
