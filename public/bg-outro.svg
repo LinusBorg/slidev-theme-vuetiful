@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980px" height="551px" viewBox="0 0 980 551" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Outro</title>
+    <defs>
+        <filter x="-3.2%" y="-3.7%" width="106.5%" height="107.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.203921569   0 0 0 0 0.28627451   0 0 0 0 0.368627451  0 0 0 0.75 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Outro" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-85.319602, -112.578968)" fill-rule="nonzero">
+            <g id="Vue-Logo" filter="url(#filter-1)" transform="translate(604.378593, 523.000000) rotate(240.000000) translate(-604.378593, -523.000000) ">
+                <g id="vue-logo">
+                    <polygon id="Path" fill="#41B883" points="743.950394 0 604.373975 241.561732 464.802174 0 0 0 604.378593 1046 1208.75719 0"></polygon>
+                    <polygon id="Path" fill="#34495E" points="743.950394 0 601.66375 236.56423 464.802174 0 239.939289 0 601.668375 623.264249 963.439641 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

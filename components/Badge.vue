@@ -3,11 +3,11 @@
     class="inline-block px-1 text-sm border rounded-sm font-bold"
     :class="style"
   >
-    <slot/>
+    <slot />
   </span>
 </template>
 <script>
-  import { computed } from "vue";
+import { computed } from 'vue'
 const colormap = {
   info: 'border-blue-500 text-blue-500',
   success: 'border-green-500 text-green-500',
@@ -20,12 +20,12 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'default'
+      default: 'default',
     },
   },
   setup(props) {
     return {
-      style: computed(() => colormap[props.type])
+      style: computed(() => colormap[props.type]),
     }
   },
 }

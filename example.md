@@ -38,7 +38,9 @@ layout: quote
 author: Linus Borg (2021)
 ---
 
-# This is a quote, and it's quite long. We have to see how line breaks are handled, because Im not quite sure.
+# This is a quote, and it's quite long. 
+
+<!-- We have to see how line breaks are handled, because Im not quite sure. -->
 
 ---
 layout: big-points

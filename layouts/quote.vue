@@ -21,12 +21,12 @@ export default {
       </transition>
     </div>
 
-    <div class="flex flex-col justify-center h-full z-2 w-[750px]">
-      <div data-quote-container class="mb-4 text-5xl">
+    <div class="flex flex-col justify-center h-full z-2 w-[750px] pl-5">
+      <div data-quote-container class="mb-4 text-5xl relative">
         <slot />
       </div>
       <hr class="w-48 border-t-5 border-vgreen mb-2" />
-      <p v-if="author" class="italic text-xl">{{ author }}</p>
+      <p v-if="author" class="italic text-xl font-extralight">{{ author }}</p>
     </div>
   </div>
 </template>
@@ -50,6 +50,8 @@ export default {
 }
 
 [data-quote-container]::before {
-  content: '"';
+  /* prettier-ignore */
+  content: '\"';
+  @apply text-8xl absolute -top-5 -left-12;
 }
 </style>

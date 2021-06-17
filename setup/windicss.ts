@@ -5,15 +5,13 @@ export default defineWindiSetup(() => ({
   theme: {
     extend: {
       colors: {
-        vgreen: "#41B883",
-        vblue: "#34495E",
+        vgreen: '#41B883',
+        vblue: '#34495E',
       },
     },
   },
   extract: {
-    include: [
-      resolve(__dirname, '../**/*.{vue,ts}'),
-    ],
+    include: [resolve(__dirname, '../**/*.{vue,ts}')],
   },
   shortcuts: {
     // custom the default background

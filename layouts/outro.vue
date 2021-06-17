@@ -1,6 +1,11 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
 
+const urlRE = /^https?:\/\//
+const urlify = (url: string) => {
+  return urlRE.test(url) ? url : `https://${url}`
+}
+
 export default defineComponent({
   props: {
     title: String,
@@ -25,61 +30,59 @@ export default defineComponent({
 
     return {
       twitterUrl,
+      urlify,
     }
   },
 })
 </script>
 <template>
-  <div class="slidev-layout">
-    <h1 v-if="$props.showTitle !== false">{{ $props.title }}</h1>
-    <div class="mt-12 bg-vgreen">
+  <div class="slidev-layout outro">
+    <h1 v-if="$props.showTitle !== false" class="text-center !text-5xl">
+      {{ $props.title }}
+    </h1>
+    <div class="absolute left-12 top-[200px] text-white text-3xl">
       <slot></slot>
     </div>
     <div
       data-x="links"
-      class="
-        bg-vblue
-        fixed
-        bottom-4
-        left-0
-        right-0
-        flex
-        text-sm
-        justify-around
-        text-center
-      "
+      class="text-white absolute bottom-8 left-4 flex flex-col gap-2"
     >
+      <div v-if="$props.twitter" data-x="twitter">
+        <logos-twitter class="inline-block mr-3" />
+        <a :href="twitterUrl">{{ $props.twitter }}</a>
+      </div>
+      <div v-if="$props.website" data-x="site" class="">
+        <uim-house-user class="inline-block mr-3" />
+        <a :href="urlify($props.website)">{{ $props.website }}</a>
+      </div>
       <div v-if="$props.repository" data-x="repo" class="">
-        <logos-github-icon />
-        <a :href="$props.repository">{{ $props.repository }}</a>
+        <logos-github-icon class="inline-block mr-3" />
+        <a :href="urlify($props.repository)">{{ $props.repository }}</a>
       </div>
       <div v-if="$props.hostedSlides" data-x="slides" class="">
-        <ri-slideshow-line class="mx-auto" />
-        <a :href="$props.repository"
-          >Slides: <br />
-          {{ $props.repository }}</a
-        >
-      </div>
-      <div v-if="$props.twitter" data-x="twitter" class="text-center">
-        <logos-twitter class="mx-auto" />
-        <a :href="twitterUrl">{{ $props.twitter }}</a>
+        <ri-slideshow-line class="inline-block mr-3" />
+        <a :href="urlify($props.hostedSlides)">
+          Slides: {{ $props.hostedSlides }}
+        </a>
       </div>
 
       <div v-if="$props.linkedin" data-x="linkedin" class="">
-        <uim-linkedin-alt class="text-blue-600 mx-auto" /><a
-          :href="$props.linkedin"
+        <uim-linkedin-alt class="inline-block mr-3 text-blue-600" /><a
+          :href="urlify($props.linkedin)"
           >{{ $props.linkedin }}</a
         >
       </div>
 
       <div v-if="$props.polywork" data-x="polywork" class="">
-        Polywork <a :href="$props.polywork">{{ $props.polywork }}</a>
-      </div>
-
-      <div v-if="$props.website" data-x="site" class="">
-        <uim-house-user class="mx-auto" />
-        <a :href="$props.website">{{ $props.website }}</a>
+        Polywork <a :href="urlify($props.polywork)">{{ $props.polywork }}</a>
       </div>
     </div>
   </div>
 </template>
+
+<style lang="postcss">
+.slidev-layout.outro {
+  background-image: url('/bg-outro.svg');
+  @apply bg-bottom bg-center;
+}
+</style>

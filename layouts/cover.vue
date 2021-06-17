@@ -23,6 +23,7 @@ export default {
             py-12
             border-t-4 border-b-4 border-vgreen
             text-center
+            shadow-xl shadow-light-500
           "
         >
           <slot />
