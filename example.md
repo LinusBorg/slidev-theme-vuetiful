@@ -71,7 +71,7 @@ function updateUser(id: number, update: Partial<User>) {
 
 ---
 layout: video
-video: https://www.youtube.com/embed/TvRtVuwcrnY
+video: https://player.vimeo.com/video/455611549
 ---
 
 # You can include video!
