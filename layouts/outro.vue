@@ -83,6 +83,6 @@ export default defineComponent({
 <style lang="postcss">
 .slidev-layout.outro {
   background-image: url('/bg-outro.svg');
-  @apply bg-bottom bg-center;
+  @apply bg-bottom bg-right;
 }
 </style>

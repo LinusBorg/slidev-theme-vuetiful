@@ -3,29 +3,9 @@ theme: ./
 clicks: 1
 ---
 
-# Slidev Theme Starter
+# Vuetiful Theme
 
-Presentation slides for developers
-
----
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
+A Vue-inspired theme for my talks about Vue
 
 ---
 layout: section
@@ -69,9 +49,6 @@ Hover on the bottom-left corner to see the navigation's controls panel
 | <kbd>down</kbd> | next slide |
 
 ---
-layout: image-right
-image: 'https://source.unsplash.com/collection/94734566/1920x1080'
----
 
 # Code
 
@@ -93,9 +70,43 @@ function updateUser(id: number, update: Partial<User>) {
 ```
 
 ---
-layout: outro
+layout: video
+video: https://www.youtube.com/embed/TvRtVuwcrnY
+---
+
+# You can include video!
+
+---
+layout: sfc
+example: Test
+---
+
+# Firing up a Vue SFC playground
+
+---
+layout: gridbase
+title: This is a flexible grid layout
 showTitle: true
+mode: 2cols
+weight: '2-1'
+---
+
+```html
+<template>
+  <div v-if="show">{{ message }}</div>
+</template>
+```
+
+::right::
+
+* Flexible column width
+* Here, more weight on the left
+* Leaves room for short notes
+
+---
+layout: outro
 title: This is the end!
+showTitle: true
 twitter: '@LinusBorg'
 repository: 'linusborg/vueday-enterjs-2021'
 hostedSlides: 'vueday-2021.linusb.org'
@@ -103,13 +114,3 @@ website: 'https://www.linusb.org'
 ---
 
 I hope you liked it!
-
-
----
-layout: center
-class: "text-center"
----
-
-# Learn More
-
-[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)

@@ -2,16 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/slidev-theme-vuetiful?color=3AB9D4&label=)](https://www.npmjs.com/package/slidev-theme-vuetiful)
 
-A (...) theme for [Slidev](https://github.com/slidevjs/slidev).
-
-<!--
-  Learn more about how to write a theme:
-  https://sli.dev/themes/write-a-theme.html
---->
-
-<!--
-  run `npm run dev` to check out the slides for more details of how to start writing a theme
--->
+A Vue-inspired theme for [Slidev](https://github.com/slidevjs/slidev).
 
 <!--
   Put some screenshots here to demonstrate your theme
@@ -35,11 +26,22 @@ This theme provides the following layouts:
 
 > TODO:
 
+### Cover
+
+### Section
+
+### Quote
+
+### Video
+
+### Big Points
+
+
 ## Components
 
 This theme provides the following components:
 
-> TODO:
+### Badge
 
 ## Contributing
 

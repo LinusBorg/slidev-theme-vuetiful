@@ -7,3 +7,4 @@ dist
 .idea/
 components.d.ts
 yarn-error.log
+TODO.md
