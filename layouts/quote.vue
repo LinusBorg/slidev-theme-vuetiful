@@ -21,7 +21,7 @@ export default {
       </transition>
     </div>
 
-    <div class="flex flex-col justify-center h-full z-2 w-[750px] pl-5">
+    <div class="flex flex-col justify-center h-full z-2 max-w-[750px] pl-5">
       <div data-quote-container class="mb-4 text-5xl relative">
         <slot />
       </div>
@@ -51,7 +51,12 @@ export default {
 
 [data-quote-container]::before {
   /* prettier-ignore */
-  content: '\"';
-  @apply text-8xl absolute -top-5 -left-12;
+  content: '\„';
+  @apply text-8xl absolute -bottom-3 -left-12 font-serif;
+}
+[data-quote-container]::after {
+  /* prettier-ignore */
+  content: '\”';
+  @apply text-8xl absolute -top-5 -right-12 font-serif;
 }
 </style>

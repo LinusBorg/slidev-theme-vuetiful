@@ -18,9 +18,7 @@ layout: quote
 author: Linus Borg (2021)
 ---
 
-# This is a quote, and it's quite long. 
-
-<!-- We have to see how line breaks are handled, because Im not quite sure. -->
+# This is a quote, and it's quite long. It can even have multiple lines as it breaks fine. The tricky thing would be when it gets too long...
 
 ---
 layout: big-points

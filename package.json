@@ -24,7 +24,9 @@
     "defaults": {
       "fonts": {
         "sans": "Source Sans Pro",
-        "mono": "Fira Code"
+        "serif": "IBM Plex Serif",
+        "mono": "Fira Code",
+        "weights": [200, 400, 600]
       },
       "hightlighter": "shiki"
     }
