@@ -9,17 +9,21 @@ const examples = inject('sfc-examples', {})
 const exampleLink = () => {
   if (typeof window === 'undefined') return
   const src = examples[props.example]
-  const encoded = window.btoa(
-    JSON.stringify({
-      'App.vue': src,
-    })
-  )
+
+  const content =
+    typeof src === 'object'
+      ? src
+      : {
+          'App.vue': src,
+        }
+
+  const encoded = window.btoa(JSON.stringify(content))
   console.log(encoded)
   return `https://sfc.vuejs.org/#${encoded}`
 }
 </script>
 <template>
-  <div class="slidev-layout">
+  <div class="slidev-layout default">
     <div class="grid justify-items-stretch items-center w-full h-full">
       <slot />
 
