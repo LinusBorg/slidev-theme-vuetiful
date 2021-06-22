@@ -6,21 +6,21 @@ export default defineComponent({
   props: {
     ...props,
     class: String,
-    mode: String, // '2cols'
-    weight: String, // 1-1 1-2 2-1
+    cols: String, // '2cols'
+    hideTitleRow: Boolean,
   },
   setup(props) {
     const gridColsSize = computed(() => {
-      if (props.mode !== '2cols') return null
-      switch (props.weight) {
+      if (!props.cols) return null
+      switch (props.cols) {
         case '1-1':
           return 'grid-cols-2'
         case '1-2':
-          return 'grid-cols-[1fr, 2fr]'
+          return 'grid-cols-[1fr,2fr]'
         case '2-1':
-          return 'grid-cols-[2fr, 1fr]'
+          return 'grid-cols-[2fr,1fr]'
         default:
-          return 'grid-cols-2'
+          return props.cols
       }
     })
 
@@ -33,16 +33,16 @@ export default defineComponent({
 
 <template>
   <div
-    class="slidev-layout grid gap-3"
-    :class="[showTitle ? 'grid-rows-[60px,1fr]' : null, gridColsSize]"
+    class="slidev-layout grid gap-y-3 gap-x-5 default"
+    :class="[!hideTitleRow ? 'grid-rows-[60px,1fr]' : null, gridColsSize]"
   >
-    <div v-if="showTitle" :class="mode === '2cols' ? 'col-span-2' : null">
+    <div v-if="!hideTitleRow" :class="cols ? 'col-span-2' : null">
       <h1>{{ title }}</h1>
     </div>
     <div>
       <slot />
     </div>
-    <div v-if="mode === '2cols'">
+    <div v-if="cols">
       <slot name="right" />
     </div>
   </div>

@@ -26,7 +26,11 @@
         "sans": "Source Sans Pro",
         "serif": "IBM Plex Serif",
         "mono": "Fira Code",
-        "weights": [200, 400, 600]
+        "weights": [
+          200,
+          400,
+          600
+        ]
       },
       "hightlighter": "shiki"
     }
@@ -40,6 +44,7 @@
     "@slidev/types": "^0.20.4",
     "codemirror-theme-vars": "^0.1.1",
     "eslint": "^7.28.0",
+    "lodash-es": "^4.17.21",
     "prettier": "^2.3.1",
     "prism-theme-vars": "^0.2.2",
     "theme-vitesse": "^0.1.12"

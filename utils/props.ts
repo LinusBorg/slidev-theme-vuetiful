@@ -17,5 +17,5 @@ export default {
   fonts: Object,
   layout: String,
   title: String,
-  showTitle: Boolean,
+  titleRow: Boolean,
 }

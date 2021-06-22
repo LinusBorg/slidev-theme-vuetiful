@@ -54,9 +54,4 @@ export default {
   content: '\„';
   @apply text-8xl absolute -bottom-3 -left-12 font-serif;
 }
-[data-quote-container]::after {
-  /* prettier-ignore */
-  content: '\”';
-  @apply text-8xl absolute -top-5 -right-12 font-serif;
-}
 </style>

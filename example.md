@@ -18,14 +18,13 @@ layout: quote
 author: Linus Borg (2021)
 ---
 
-# This is a quote, and it's quite long. It can even have multiple lines as it breaks fine. The tricky thing would be when it gets too long...
+# Big quotes make your talk look fancy
 
 ---
 layout: big-points
-title: This is for  bigger points
-showTitle: true
+title: Need to make a few big points?
+titleRow: true
 ---
-
 
 - Increased font size...
 - ...and centered content
@@ -72,7 +71,7 @@ layout: video
 video: https://player.vimeo.com/video/455611549
 ---
 
-# You can include video!
+# You can include Video!
 
 ---
 layout: sfc
@@ -84,9 +83,8 @@ example: Test
 ---
 layout: gridbase
 title: This is a flexible grid layout
-showTitle: true
-mode: 2cols
-weight: '2-1'
+# hideTitleRow: true
+cols: '2-1'
 ---
 
 ```html
@@ -97,9 +95,13 @@ weight: '2-1'
 
 ::right::
 
+## Subheading
+
 * Flexible column width
 * Here, more weight on the left
 * Leaves room for short notes
+
+And a paragraph needs to be in there, as well.
 
 ---
 layout: outro
