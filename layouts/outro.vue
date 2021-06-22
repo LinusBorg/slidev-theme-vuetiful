@@ -40,7 +40,15 @@ export default defineComponent({
     <h1 v-if="$props.showTitle !== false" class="text-center !text-5xl">
       {{ $props.title }}
     </h1>
-    <div class="absolute left-12 top-[200px] text-white text-3xl">
+    <div
+      class="
+        absolute
+        left-12
+        top-[200px]
+        right-12
+        text-white text-center text-5xl
+      "
+    >
       <slot></slot>
     </div>
     <div

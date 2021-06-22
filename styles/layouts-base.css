@@ -10,7 +10,11 @@
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-3xl mb-3;
+  }
+  
+  h3 {
+    @apply text-2xl font-bold mb-2;
   }
 
   p {

@@ -105,12 +105,11 @@ And a paragraph needs to be in there, as well.
 
 ---
 layout: outro
-title: This is the end!
-showTitle: true
 twitter: '@LinusBorg'
-repository: 'linusborg/vueday-enterjs-2021'
-hostedSlides: 'vueday-2021.linusb.org'
 website: 'https://www.linusb.org'
+repository: 'linusborg/slidev-theme-vuetiful'
 ---
 
-I hope you liked it!
+Thank you for listening!
+
+Questions?

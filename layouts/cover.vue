@@ -9,14 +9,22 @@ export default {
 </script>
 <template>
   <div class="slidev-layout l-cover flex items-center justify-center">
-    <div v-if="$slidev.nav.clicks === 1" class="w-full absolute">
+    <div class="absolute inset-0 z-1">
+      <img
+        src="/bg-cover.svg"
+        alt=""
+        :class="$slidev.nav.clicks ? 'opacity-50' : 'opacity-80'"
+      />
+    </div>
+    <div v-click class="w-full absolute z-2">
       <transition
         appear
-        enter-from-class="transform scale-75 opacity-0 translate-y-12"
-        enter-active-class="transition-all duration-200 origin-center ease-in"
+        enter-from-class="transform scale-85 opacity-0 translate-y-8"
+        enter-active-class="transition-all duration-200 origin-bottom ease-in"
         enter-to-class="transform scale-100"
       >
         <div
+          v-if="$slidev.nav.clicks === 1"
           class="
             bg-white
             dark:bg-vblue
@@ -51,7 +59,7 @@ export default {
 </template>
 <style scoped lang="postcss">
 .l-cover {
-  background-image: url('/bg-cover.svg');
+  /* background-image: url('/bg-cover.svg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
