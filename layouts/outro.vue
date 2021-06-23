@@ -57,31 +57,54 @@ export default defineComponent({
     >
       <div v-if="$props.twitter" data-x="twitter">
         <logos-twitter class="inline-block mr-3" />
-        <a :href="twitterUrl">{{ $props.twitter }}</a>
+        <a :href="twitterUrl" target="_blank" ref="noopener noreferrer">{{
+          $props.twitter
+        }}</a>
       </div>
-      <div v-if="$props.website" data-x="site" class="">
+      <div v-if="$props.website" data-x="site">
         <uim-house-user class="inline-block mr-3" />
-        <a :href="urlify($props.website)">{{ $props.website }}</a>
+        <a
+          :href="urlify($props.website)"
+          target="_blank"
+          ref="noopener noreferrer"
+          >{{ $props.website }}</a
+        >
       </div>
-      <div v-if="$props.repository" data-x="repo" class="">
+      <div v-if="$props.repository" data-x="repo">
         <logos-github-icon class="inline-block mr-3" />
-        <a :href="urlify($props.repository)">{{ $props.repository }}</a>
+        <a
+          :href="urlify($props.repository)"
+          target="_blank"
+          ref="noopener noreferrer"
+          >{{ $props.repository }}</a
+        >
       </div>
-      <div v-if="$props.hostedSlides" data-x="slides" class="">
+      <div v-if="$props.hostedSlides" data-x="slides">
         <ri-slideshow-line class="inline-block mr-3" />
-        <a :href="urlify($props.hostedSlides)">
+        <a
+          :href="urlify($props.hostedSlides)"
+          target="_blank"
+          ref="noopener noreferrer"
+        >
           Slides: {{ $props.hostedSlides }}
         </a>
       </div>
 
-      <div v-if="$props.linkedin" data-x="linkedin" class="">
+      <div v-if="$props.linkedin" data-x="linkedin">
         <uim-linkedin-alt class="inline-block mr-3 text-blue-600" /><a
           :href="urlify($props.linkedin)"
+          target="_blank"
+          ref="noopener noreferrer"
           >{{ $props.linkedin }}</a
         >
       </div>
 
-      <div v-if="$props.polywork" data-x="polywork" class="">
+      <div
+        v-if="$props.polywork"
+        data-x="polywork"
+        target="_blank"
+        ref="noopener noreferrer"
+      >
         Polywork <a :href="urlify($props.polywork)">{{ $props.polywork }}</a>
       </div>
     </div>
