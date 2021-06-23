@@ -1,6 +1,6 @@
 {
   "name": "slidev-theme-vuetiful",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Thorsten Lünborg",
@@ -25,7 +25,7 @@
       "fonts": {
         "sans": "Source Sans Pro",
         "serif": "IBM Plex Serif",
-        "mono": "Fira Code",
+        "mono": "IBM Plex mono",
         "weights": [
           200,
           400,

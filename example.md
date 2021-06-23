@@ -51,19 +51,23 @@ Hover on the bottom-left corner to see the navigation's controls panel
 
 Use code snippets and get the highlighting directly!
 
-```ts
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
-}
+```html
+<template>
+  <h1>Hello World"</h1>
+  <div class="message">{{ message }}</div>
+</template>
+<script>
+  export default {
+    data:() => ({
+      message: 'Great to be here!',
+    })
+  }
+</script>
+<style scoped>
+  .message {
+    color: red;
+  }
+</style>
 ```
 
 ---
@@ -81,27 +85,37 @@ example: Test
 # Firing up a Vue SFC playground
 
 ---
-layout: gridbase
-title: This is a flexible grid layout
-# hideTitleRow: true
+title: Default Slide can show flexible grids
+titleRow: true
 cols: '2-1'
 ---
 
 ```html
 <template>
-  <div v-if="show">{{ message }}</div>
+  <h1>Hello World"</h1>
+  <div class="message">{{ message }}</div>
 </template>
+<script>
+  export default {
+    data:() => ({
+      message: 'Great to be here!',
+    })
+  }
+</script>
+<style scoped>
+  .message {
+    color: red;
+  }
+</style>
 ```
 
 ::right::
 
-## Subheading
+## Features
 
-* Flexible column width
+* Flexible column width via windicss
 * Here, more weight on the left
 * Leaves room for short notes
-
-And a paragraph needs to be in there, as well.
 
 ---
 layout: outro
