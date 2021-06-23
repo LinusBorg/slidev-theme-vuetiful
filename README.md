@@ -4,10 +4,21 @@
 
 A Vue-inspired theme for [Slidev](https://github.com/slidevjs/slidev).
 
+Live demo: https://slidev-theme-vuetiful.netlify.app/
+
+
+### Features
+
+* Pretty Vue Theme
+* Subtle Animations on Cover, Section etc. slides
+* Code Highlighting with Sarah Drasner's Night Owl Theme
+* SFC Playground Integration
+* Flexible Default Layout using Grids
+* 
+
 <!--
   Put some screenshots here to demonstrate your theme
 
-  Live demo: [...]
 -->
 
 ## Install
@@ -33,12 +44,79 @@ This theme provides the following layouts:
  - Quote
  - SFC
  - Video
+ - Outro
 
 ### Default
+
+The default slide has a few tricks up it's sleeve.
+
+It an of course be used as-is:
+
+```
+---
+
+# This will be the heading
+
+And this can be used as test below it
+
+-  We can have a list.
+- With a few items.
+
+---
+
+```
+
+But it can also have the title in a special row:
+
+```
+---
+title: This will now be the heading
+titleRow: true
+---
+
+This content can now be styled/positioned independent of the title,
+because it will be in a separate grid cell.
+
+---
+```
+
+We can also do a quick column:
+
+```
+---
+cols: 1-1 # Other values: 2-1 or 1-2, as well as any valid grid-cols-* class from windiwcss
+---
+
+This will go in the left column
+
+:::right:::
+
+This will go into the right column
+
+---
+```
+
+You can also combine this with the separate titleRow:
+
+```
+---
+title: This will span both columns
+titleRow: true
+cols: 2-1
+---
+
+This will be in the wider, left column
+
+:::right:::
+
+This will be in the smaller, right column
+
+```
 
 ### Cover
 
 A Cover slide for the Talk Title & Subtitle
+#### Example
 
 ```frontmatter
 ---
@@ -51,7 +129,7 @@ A Vue-inspired theme for my talks about Vue
 ```
 
 > Note: the `clicks: 1` is necessary for the entry transition to work properly
-#### Example
+
 ![Screenshot of Cover Slide](./screenshots/cover.png)
 
 
@@ -60,6 +138,24 @@ A Vue-inspired theme for my talks about Vue
 This slide type is much like the default slide, the main difference is that the content font-size is bigger and the content in centered.
 
 Useful for slides that just contain a few points or sentences.
+
+#### Example
+
+
+```frontmatter
+---
+layout: big-points
+title: Need to make a few big points?
+titleRow: true
+---
+
+- Increased font size...
+- ...and centered content
+- help stressing a few points
+
+```
+
+![Screenshot of Big-Points Slide](./screenshots/big-points.png)
 
 ### Section
 

@@ -30,22 +30,7 @@ titleRow: true
 - ...and centered content
 - help stressing a few points
 
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
----
+--- 
 
 # Code
 
@@ -119,9 +104,9 @@ cols: '2-1'
 
 ---
 layout: outro
-twitter: '@LinusBorg'
+twitter: '@Linus_Borg'
 website: 'https://www.linusb.org'
-repository: 'linusborg/slidev-theme-vuetiful'
+repository: 'github.com/linusborg/slidev-theme-vuetiful'
 ---
 
 Thank you for listening!
