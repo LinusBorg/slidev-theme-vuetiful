@@ -1,6 +1,7 @@
 ---
 theme: ./
 clicks: 1
+altCover: true 
 ---
 
 # Vuetiful Theme

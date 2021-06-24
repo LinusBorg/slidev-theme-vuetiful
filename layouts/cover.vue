@@ -4,14 +4,15 @@ export default {
   props: {
     ...props,
     showHint: Boolean,
+    altCover: Boolean,
   },
 }
 </script>
 <template>
-  <div class="slidev-layout l-cover flex items-center justify-center">
+  <div class="slidev-layout cover flex items-center justify-center">
     <div class="absolute inset-0 z-1">
       <img
-        src="/bg-cover.svg"
+        :src="altCover ? '/bg-cover-alt.svg' : '/bg-cover.svg'"
         alt=""
         :class="$slidev.nav.clicks ? 'opacity-50' : 'opacity-80'"
       />
