@@ -25,11 +25,11 @@
       "fonts": {
         "sans": "Source Sans Pro",
         "serif": "IBM Plex Serif",
-        "mono": "IBM Plex mono",
+        "mono": "IBM Plex Mono",
         "weights": [
-          200,
-          400,
-          600
+          "200",
+          "400",
+          "600"
         ]
       },
       "hightlighter": "shiki"
