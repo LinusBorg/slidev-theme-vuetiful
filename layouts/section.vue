@@ -26,7 +26,7 @@ export default {
     </div>
   </div>
 </template>
-<style lang="postcss" scoped>
+<style lang="postcss">
 .section-enter-from {
   transform: rotate(1deg);
   /* opacity: .2; */
@@ -40,8 +40,8 @@ export default {
 }
 
 .slidev-layout.section {
-  & ::v-deep(h1) {
-    @apply text-5xl light:text-vblue;
+  h1 {
+    @apply text-5xl light:text-vblue font-light;
   }
 }
 </style>

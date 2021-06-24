@@ -37,18 +37,20 @@ export default defineComponent({
 </script>
 <template>
   <div class="slidev-layout outro">
+    <div class="absolute inset-0 -z-1">
+      <transition appear name="outro">
+        <img
+          src="/bg-outro.svg"
+          alt=""
+          v-if="$slidev.nav.currentLayout === 'outro'"
+          class="opacity-80"
+        />
+      </transition>
+    </div>
     <h1 v-if="$props.showTitle !== false" class="text-center !text-5xl">
       {{ $props.title }}
     </h1>
-    <div
-      class="
-        absolute
-        left-12
-        top-[200px]
-        right-12
-        text-white text-center text-5xl
-      "
-    >
+    <div class="absolute left-12 top-[200px] right-12 text-center text-5xl">
       <slot></slot>
     </div>
     <div
@@ -112,8 +114,17 @@ export default defineComponent({
 </template>
 
 <style lang="postcss">
+.outro-enter-from {
+  transform: translate(-20px, 20px);
+}
+.outro-enter-active {
+  transition: all 0.5s ease-in-out;
+}
+.outro-enter-to {
+  transform: translate(0, 0);
+}
+
 .slidev-layout.outro {
-  background-image: url('/bg-outro.svg');
   @apply bg-bottom bg-right;
 }
 </style>

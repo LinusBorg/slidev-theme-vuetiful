@@ -16,14 +16,14 @@ html:not(.dark) #slide-content {
 
 .slidev-layout.cover,
 .slidev-layout.intro {
-  @apply h-full grid;
+  /* @apply h-full grid; */
 
   h1 {
     @apply text-6xl leading-20;
   }
 
   h1 + p {
-    @apply -mt-2 opacity-50 mb-4;
+    @apply -mt-2 opacity-50 mb-4 font-200;
   }
 
   p + h2, ul + h2, table + h2 {
