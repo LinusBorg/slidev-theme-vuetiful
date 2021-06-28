@@ -6,7 +6,6 @@ A Vue-inspired theme for [Slidev](https://github.com/slidevjs/slidev).
 
 Live demo: https://slidev-theme-vuetiful.netlify.app/
 
-
 ### Features
 
 * Pretty Vue Theme
@@ -16,10 +15,8 @@ Live demo: https://slidev-theme-vuetiful.netlify.app/
 * Flexible Default Layout using Grids
 * 
 
-<!--
-  Put some screenshots here to demonstrate your theme
-
--->
+![Cover](./screenshots/cover-alt.png)
+![Default](./screenshots/default.png)
 
 ## Install
 
@@ -121,6 +118,7 @@ A Cover slide for the Talk Title & Subtitle
 ```frontmatter
 ---
 layout: cover
+cover: alt # to enable alternative cover
 clicks: 1
 ---
 
@@ -130,7 +128,20 @@ A Vue-inspired theme for my talks about Vue
 
 > Note: the `clicks: 1` is necessary for the entry transition to work properly
 
+![Screenshot of Cover Slide](./screenshots/cover-alt.png)
+
+<details>
+<summary>Click for more screens</summary>
+
+Default cover:
+
 ![Screenshot of Cover Slide](./screenshots/cover.png)
+
+White alt cover:
+
+![Screenshot of Cover Slide](./screenshots/cover-alt-white.png)
+</details>
+
 
 
 ### Big Points
@@ -161,15 +172,31 @@ titleRow: true
 
 This slide can be used to split your talks into sections. It's meant to only have a single heading.
 
+![Section Slide](./screenshots/section.png)
+
 ### Quote
 
 Sometimes you want to drive home a point with a quote. This slide provides a nice way of doing that.
 
 #### Example
 
+```
+---
+layout: quote
+author: Linus Borg (2021)
+---
+
+# Big quotes make your talk look fancy
+
+---
+```
+
+![Quote Slide](./screenshots/quote.png)
+
 ### SFC (Single File Component Preview)
 
 This template integrates the SF playground ([sfc.vuejs.org](https://sfc.vuejs.org)) which allows for live demos. It's usage requires a bit of preparation/config.
+
 
 #### Config
 
@@ -228,12 +255,7 @@ example: Test
 
 ### Video
 
-
-## Components
-
-This theme provides the following components:
-
-### Badge
+![Slide for Videos](./screenshots/video.png)
 
 ## Contributing
 

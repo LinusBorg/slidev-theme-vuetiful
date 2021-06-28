@@ -27,7 +27,7 @@ title: Need to make a few big points?
 titleRow: true
 ---
 
-- Increased font size...
+- Increased font size... <Badge type="warn">Test</Badge>
 - ...and centered content
 - help stressing a few points
 
