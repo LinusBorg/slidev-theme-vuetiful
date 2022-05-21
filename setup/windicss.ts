@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import { defineWindiSetup } from '@slidev/types'
 
+// export default defineWindiSetup(() => config)
 export default defineWindiSetup(() => ({
   theme: {
     extend: {

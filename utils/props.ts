@@ -1,6 +1,10 @@
 declare module '@vue/runtime-core' {
   export interface ComponentCustomProperties {
     $slidev: {
+      configs: {
+        title?: string
+        [key: string]: string | number | boolean
+      }
       nav: {
         currentLayout: string
         currentPage: number
@@ -16,6 +20,5 @@ export default {
   highlighter: String,
   fonts: Object,
   layout: String,
-  title: String,
   titleRow: Boolean,
 }

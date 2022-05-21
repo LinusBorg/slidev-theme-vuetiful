@@ -1,8 +1,8 @@
-<script lang="ts">
+<script>
 import { defineComponent, computed } from 'vue'
 
 const urlRE = /^https?:\/\//
-const urlify = (url: string) => {
+const urlify = (url) => {
   return urlRE.test(url) ? url : `https://${url}`
 }
 
@@ -40,7 +40,7 @@ export default defineComponent({
     <div class="absolute inset-0 -z-1">
       <transition appear name="outro">
         <img
-          src="/bg-outro.svg"
+          src="../assets/bg-outro.svg"
           alt=""
           v-if="$slidev.nav.currentLayout === 'outro'"
           class="opacity-80"
@@ -50,7 +50,7 @@ export default defineComponent({
     <h1 v-if="$props.showTitle !== false" class="text-center !text-5xl">
       {{ $props.title }}
     </h1>
-    <div class="absolute left-12 top-[200px] right-12 text-center text-5xl">
+    <div>
       <slot></slot>
     </div>
     <div

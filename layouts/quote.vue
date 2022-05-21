@@ -13,7 +13,7 @@ export default {
     <div class="absolute inset-0 z-1">
       <transition appear name="section">
         <img
-          src="/bg-quote.svg"
+          src="../assets/bg-quote.svg"
           alt=""
           v-if="$slidev.nav.currentLayout === 'quote'"
           class="opacity-80"

@@ -1,18 +1,18 @@
-<script>
-import props from '../utils/props'
-export default {
-  props: {
-    ...props,
-    showHint: Boolean,
-    altCover: Boolean,
-  },
-}
+<script setup>
+import _props from '../utils/props'
+import BgCoverSVG from '../assets/bg-cover.svg'
+import BgCoverAltSVG from '../assets/bg-cover-alt.svg'
+defineProps({
+  ..._props,
+  showHint: Boolean,
+  altCover: Boolean,
+})
 </script>
 <template>
   <div class="slidev-layout cover flex items-center justify-center">
     <div class="absolute inset-0 z-1">
       <img
-        :src="altCover ? '/bg-cover-alt.svg' : '/bg-cover.svg'"
+        :src="altCover ? BgCoverAltSVG : BgCoverSVG"
         alt=""
         :class="$slidev.nav.clicks ? 'opacity-50' : 'opacity-80'"
       />
@@ -26,14 +26,7 @@ export default {
       >
         <div
           v-if="$slidev.nav.clicks === 1"
-          class="
-            bg-white
-            dark:bg-vblue
-            py-12
-            border-t-4 border-b-4 border-vgreen
-            text-center
-            shadow-xl shadow-light-500
-          "
+          class="bg-white dark:bg-vblue py-12 border-t-4 border-b-4 border-vgreen text-center shadow-lg shadow-light-300/50 light:shadow-gray-300/50"
         >
           <slot />
         </div>
@@ -43,15 +36,7 @@ export default {
       <span
         v-if="showHint"
         @click="$slidev.nav.next"
-        class="
-          px-2
-          p-1
-          rounded
-          cursor-pointer
-          text-white
-          bg-white bg-opacity-10
-          hover:bg-opacity-20
-        "
+        class="px-2 p-1 rounded cursor-pointer text-white bg-white bg-opacity-10 hover:bg-opacity-20"
       >
         Press Space to continue <carbon:arrow-right class="inline" />
       </span>

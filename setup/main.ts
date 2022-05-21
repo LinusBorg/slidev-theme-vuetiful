@@ -1,10 +1,6 @@
 import { defineAppSetup } from '@slidev/types'
-import Test from '../examples/Test.vue?raw'
-
-const examples = {
-  Test,
-}
+import Examples from '../examples'
 
 export default defineAppSetup(({ app }) => {
-  app.provide('sfc-examples', examples)
+  app.provide('repl-content', Examples)
 })

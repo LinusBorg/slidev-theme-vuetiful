@@ -195,7 +195,7 @@ author: Linus Borg (2021)
 
 ### SFC (Single File Component Preview)
 
-This template integrates the SF playground ([sfc.vuejs.org](https://sfc.vuejs.org)) which allows for live demos. It's usage requires a bit of preparation/config.
+This template integrates the SFC playground ([sfc.vuejs.org](https://sfc.vuejs.org)) which allows for live demos. It's usage requires a bit of preparation/config.
 
 
 #### Config
@@ -212,7 +212,7 @@ import Child from '../examples/Child.vue?raw'
 
 
 interface Examples {
-  [key: string]: string | {
+  [key: string]: {
     [key: string]: string
   }
 }
@@ -220,7 +220,9 @@ const examples: Examples = {
   // for examples consisting of a single file, 
   // just pass its content as value
   // File will be named App.vue
-  Test: Test,
+  Test: {
+    'App.vue': Test,
+  },
   // to construct an example from multiple files,
   // or have a custom name for the file,
   // pass an object where each key is the filename 
@@ -234,11 +236,11 @@ const examples: Examples = {
 export default defineAppSetup(({ app }) => {
   // use app.provide to make all examples 
   // available to the SFC Slide implementation
-  app.provide('sfc-examples', examples)
+  app.provide('repl-content', examples)
 })
 ```
 
-### Usage
+### Usage in a slide
 
 ```frontmatter
 ---

@@ -1,12 +1,23 @@
 ---
 theme: ./
 clicks: 1
-altCover: true 
+altCover: false 
 ---
 
 # Vuetiful Theme
 
 A Vue-inspired theme for my talks about Vue
+
+---
+
+# This is the default page
+
+it can have a heading, and then you add whatever content your want beneath that.
+
+It can also have two columns, we demo that later in these slides.
+
+* Classic item lists look like this.
+* We have a slide variant with bigger list points to stress them, see later.
 
 ---
 layout: section
@@ -65,7 +76,7 @@ video: https://player.vimeo.com/video/455611549
 
 ---
 layout: sfc
-example: Test
+example: simple
 ---
 
 # Firing up a Vue SFC playground
@@ -104,12 +115,14 @@ cols: '2-1'
 * Leaves room for short notes
 
 ---
-layout: outro
+layout: outro 
+title: Outro
 twitter: '@Linus_Borg'
 website: 'https://www.linusb.org'
 repository: 'github.com/linusborg/slidev-theme-vuetiful'
 ---
 
-Thank you for listening!
-
-Questions?
+<div class="absolute left-12 top-[200px] right-12 text-center text-light-600">
+  <p class="text-4xl !leading-[1.5em]">Thank you for listening!</p>
+  <!-- <p class="text-4xl !leading-[1.5em]">Questions?</p> -->
+</div>

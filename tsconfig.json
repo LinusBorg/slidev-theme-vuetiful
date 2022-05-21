@@ -4,7 +4,8 @@
     "moduleResolution": "node",
     "allowJs": true,
     "outDir": "dist",
-    "types": ["vite/client"]
+    "jsx": "preserve",
+    "types": ["vite/client"],
   },
-  "include": ["components/**/*.vue", "layouts/**/*.vue", "setup/*.ts", "utils/*.js", "windi.config.js", "utils/props.ts"]
+  "include": ["components/**/*.vue", "examples/**/*.*","layouts/**/*.vue", "setup/*.ts", "utils/*.js", "windi.config.ts", "utils/props.ts"]
 }

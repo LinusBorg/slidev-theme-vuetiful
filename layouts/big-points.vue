@@ -44,7 +44,7 @@ export default {
 .slidev-layout .big-content {
   p,
   li {
-    @apply text-3xl;
+    @apply text-3xl pb-4;
   }
 }
 </style>
