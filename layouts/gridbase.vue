@@ -37,7 +37,7 @@ export default defineComponent({
     :class="[!hideTitleRow ? 'grid-rows-[60px,1fr]' : null, gridColsSize]"
   >
     <div v-if="!hideTitleRow" :class="cols ? 'col-span-2' : null">
-      <h1>{{ $slidev.configs.title }}</h1>
+      <h1>{{ $slidev.nav.currentRoute.meta.title }}</h1>
     </div>
     <div>
       <slot />

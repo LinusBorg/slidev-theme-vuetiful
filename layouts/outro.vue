@@ -48,7 +48,7 @@ export default defineComponent({
       </transition>
     </div>
     <h1 v-if="$props.showTitle !== false" class="text-center !text-5xl">
-      {{ $props.title }}
+      {{ $slidev.nav.currentRoute.meta.title }}
     </h1>
     <div>
       <slot></slot>
