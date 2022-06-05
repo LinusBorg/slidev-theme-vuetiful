@@ -259,6 +259,13 @@ example: Test
 
 ![Slide for Videos](./screenshots/video.png)
 
+### FullImage
+
+```bash
+layout: full-image
+image: coverImage.png # needs to be in /public, path should not have leading slashes
+```
+
 ## Contributing
 
 - `npm install`

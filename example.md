@@ -115,11 +115,19 @@ cols: '2-1'
 * Leaves room for short notes
 
 ---
+layout: full-image
+image: canyon.jpeg
+---
+
+# You can use a full-screen image without the default decoration
+
+---
 layout: outro 
 title: Outro
 twitter: '@Linus_Borg'
 website: 'https://www.linusb.org'
 repository: 'github.com/linusborg/slidev-theme-vuetiful'
+hostedSlides: 'https://slidev-theme-vuetiful.netlify.app/'
 ---
 
 <div class="absolute left-12 top-[200px] right-12 text-center text-light-600">
