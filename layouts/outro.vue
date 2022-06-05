@@ -1,39 +1,30 @@
-<script>
-import { defineComponent, computed } from 'vue'
+<script setup>
+import { computed } from 'vue'
 
 const urlRE = /^https?:\/\//
 const urlify = (url) => {
   return urlRE.test(url) ? url : `https://${url}`
 }
 
-export default defineComponent({
-  props: {
-    title: String,
-    showTitle: Boolean,
-    repository: String,
-    twitter: String,
-    linkedin: String,
-    polywork: String,
-    website: String,
-    hostedSlides: String,
-  },
-  setup(props) {
-    const twitterUrl = computed(() =>
-      props.twitter?.startsWith('@')
-        ? `https://www.twitter.com/${props.twitter.slice(1)}`
-        : props.twitter?.startsWith('http') ||
-          props.twitter?.startsWith('www') ||
-          props.twitter?.startsWith('twitter.com')
-        ? props.twitter
-        : `https://www.twitter.com/${props.twitter}`
-    )
-
-    return {
-      twitterUrl,
-      urlify,
-    }
-  },
+const props = defineProps({
+  title: String,
+  showTitle: Boolean,
+  repository: String,
+  twitter: String,
+  linkedin: String,
+  polywork: String,
+  website: String,
+  hostedSlides: String,
 })
+const twitterUrl = computed(() =>
+  props.twitter?.startsWith('@')
+    ? `https://www.twitter.com/${props.twitter.slice(1)}`
+    : props.twitter?.startsWith('http') ||
+      props.twitter?.startsWith('www') ||
+      props.twitter?.startsWith('twitter.com')
+    ? props.twitter
+    : `https://www.twitter.com/${props.twitter}`
+)
 </script>
 <template>
   <div class="slidev-layout outro">
@@ -82,7 +73,7 @@ export default defineComponent({
         >
       </div>
       <div v-if="$props.hostedSlides" data-x="slides">
-        <ri-slideshow-line class="inline-block mr-3" />
+        <uim-bookmark class="inline-block mr-3" />
         <a
           :href="urlify($props.hostedSlides)"
           target="_blank"

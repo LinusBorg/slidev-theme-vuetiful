@@ -1,9 +1,11 @@
 <script>
-import props from '../utils/props'
 export default {
-  props,
-  setup() {},
+  name: 'SectionSlide',
 }
+</script>
+<script setup>
+import props from '../utils/props'
+defineProps(props)
 </script>
 <template>
   <div class="slidev-layout section">

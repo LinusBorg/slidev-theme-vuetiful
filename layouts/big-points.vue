@@ -1,34 +1,26 @@
 <script>
-import { computed } from 'vue'
-import omit from 'lodash-es/omit'
-import props from '../utils/props'
-import Default from './default.vue'
-
 export default {
   inheritAttrs: false,
-  props: {
-    ...props,
-    position: String,
-  },
-  components: {
-    Default,
-  },
-
-  setup(props, { attrs }) {
-    const positionClass = computed(() =>
-      props.position === 'top' ? 'justify-center pt-8' : 'place-content-center'
-    )
-    const defaultProps = computed(() => ({
-      ...omit(props, 'position'),
-      ...attrs,
-    }))
-
-    return {
-      positionClass,
-      defaultProps,
-    }
-  },
 }
+</script>
+<script setup>
+import { computed, useAttrs } from 'vue'
+import omit from 'lodash-es/omit'
+import _props from '../utils/props'
+import Default from './default.vue'
+
+const props = defineProps({
+  ..._props,
+  position: String,
+})
+
+const positionClass = computed(() =>
+  props.position === 'top' ? 'justify-center pt-8' : 'place-content-center'
+)
+const defaultProps = computed(() => ({
+  ...omit(props, 'position'),
+  ...useAttrs(),
+}))
 </script>
 
 <template>

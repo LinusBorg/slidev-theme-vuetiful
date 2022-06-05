@@ -1,32 +1,24 @@
-<script>
-import { defineComponent, computed } from 'vue'
-import props from '../utils/props'
+<script setup>
+import { computed } from 'vue'
+import _props from '../utils/props'
 
-export default defineComponent({
-  props: {
-    ...props,
-    class: String,
-    cols: String, // '2cols'
-  },
-  setup(props) {
-    const gridColsSize = computed(() => {
-      if (!props.cols) return null
-      switch (props.cols) {
-        case '1-1':
-          return 'grid-cols-2'
-        case '1-2':
-          return 'grid-cols-[1fr,2fr]'
-        case '2-1':
-          return 'grid-cols-[2fr,1fr]'
-        default:
-          return props.cols
-      }
-    })
-
-    return {
-      gridColsSize,
-    }
-  },
+const props = defineProps({
+  ..._props,
+  class: String,
+  cols: String, // '2cols'
+})
+const gridColsSize = computed(() => {
+  if (!props.cols) return null
+  switch (props.cols) {
+    case '1-1':
+      return 'grid-cols-2'
+    case '1-2':
+      return 'grid-cols-[1fr,2fr]'
+    case '2-1':
+      return 'grid-cols-[2fr,1fr]'
+    default:
+      return props.cols
+  }
 })
 </script>
 

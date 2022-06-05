@@ -1,12 +1,9 @@
-<script>
-import props from '../utils/props'
-export default {
-  props: {
-    ...props,
-    author: String,
-  },
-  setup() {},
-}
+<script setup>
+import _props from '../utils/props'
+defineProps({
+  ..._props,
+  author: String,
+})
 </script>
 <template>
   <div class="slidev-layout section">
