@@ -1,6 +1,6 @@
 {
   "name": "slidev-theme-vuetiful",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "license": "MIT",
   "author": {
     "name": "Thorsten Lünborg",
@@ -50,8 +50,6 @@
     }
   },
   "dependencies": {
-    "@vue/repl": "^1.0.0",
-    "codemirror-theme-vars": "^0.1.1",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
@@ -59,12 +57,24 @@
     "@iconify-json/ri": "^1.1.1",
     "@iconify-json/uim": "^1.1.1",
     "@linusborg/eslint-config": "^0.2.1",
-    "@slidev/cli": "^0.30.3",
-    "@slidev/types": "^0.30.3",
+    "@slidev/cli": "^0.32.4",
+    "@slidev/types": "0.32.4",
     "@types/node": "^16.0.0",
     "eslint": "^8.14.0",
     "prettier": "^2.3.1",
     "typescript": "^4.3.2",
-    "vue": "^3.2.33"
+    "vue": "^3.2.36"
+  },
+  "peerDependencies": {
+    "@slidev/cli": "^0.32.4",
+    "vue": "^3.2.36"
+  },
+  "peerDependenciesMeta": {
+    "@slidev/cli": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
   }
 }
