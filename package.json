@@ -1,6 +1,6 @@
 {
   "name": "slidev-theme-vuetiful",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "author": {
     "name": "Thorsten Lünborg",
@@ -66,7 +66,7 @@
     "vue": "^3.2.36"
   },
   "peerDependencies": {
-    "@slidev/cli": "^0.32.4",
+    "@slidev/cli": ">=0.32.4",
     "vue": "^3.2.36"
   },
   "peerDependenciesMeta": {
